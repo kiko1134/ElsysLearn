@@ -3,8 +3,8 @@ class Navbar extends React.Component {
         super(props);
         // this.LogOut = this.LogOut.bind(this)
         this.state={
-            name:'kris',
-            logged:''
+            name:'',
+            logged:false
         }
     }
     // LogOut(event){
