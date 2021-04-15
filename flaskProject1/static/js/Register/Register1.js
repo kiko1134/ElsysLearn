@@ -5,6 +5,7 @@ class Register1 extends React.Component {
 
         }
     }
+    
 
     render() {
         return (
