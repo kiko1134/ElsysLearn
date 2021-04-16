@@ -9,7 +9,7 @@
   background-color: #8b9099;
   position: relative;
   z-index: 1;
-  /*background: #FFFFFF;*/
+
   max-width: 360px;
   padding: 45px;
   text-align: center;
@@ -37,8 +37,6 @@
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
-  /*-webkit-transition: all 0.3 ease;*/
-  /*transition: all 0.3 ease;*/
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
