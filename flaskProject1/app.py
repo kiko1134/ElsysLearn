@@ -18,8 +18,8 @@ def home():
 def index():
 
     message = ''
-    if "email" in session:
-        return redirect(url_for("logged_in"))
+    # if "email" in session:
+    #     return redirect(url_for("logged_in"))
 
     if request.method == "POST":
         user = request.form.get("fullname")
@@ -55,8 +55,8 @@ def index():
 @app.route("/login", methods=["POST", "GET"])
 def login():
     message = 'Please login to your account'
-    if "email" in session:
-        return redirect(url_for("logged_in"))
+    # if "email" in session:
+    #     return redirect(url_for("logged_in"))
         
 
     if request.method == "POST":
