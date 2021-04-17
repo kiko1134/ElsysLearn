@@ -3,13 +3,11 @@ html {
   background-color: #1878e0;
 }
 
-
-
 body {
   margin:0px;
 }
 .parallax {
-  background-image: url(tues_homepage_purva_snimka.jpg);
+  background-image: url(../images/tues_homepage_purva_snimka.jpg);
   min-height: 750px;
   background-attachment: fixed;
   background-position: center;
@@ -18,7 +16,7 @@ body {
 }
 
 .parallax1 {
-  background-image: url(hr_2018.jpg);
+  background-image: url(../images/hr_2018.jpg);
   min-height: 750px;
   background-attachment: fixed;
   background-position: center;
@@ -28,7 +26,7 @@ body {
 
 .parallax2
 {
-   background-image: url(code.jpg);
+   background-image: url(../images/code.jpg);
   min-height: 750px;
   background-attachment: fixed;
   background-position: center;
@@ -42,8 +40,6 @@ p {
   text-align: center;
   margin-right: 50px;
   color:white;
-  /*font-size: large;*/
-  /*letter-spacing: 3px;*/
 }
 
 h1 {
@@ -56,17 +52,13 @@ h1 {
 .content {
   padding-top: 10px;
   background-color: #343a40;
-  /*background: rgba(0, 128, 0, 0.3);*/
-  /*opacity: 0.4;*/
   height: auto;
   width: auto;
   border: 5px solid #343a40;
-  /*background-color: rgba(255, 255, 255, 0.8);*/
   border-radius:.25em;
   box-shadow:0 0 .25em rgba(0,0,0,.25);
   box-sizing:border-box;
-  /*  padding: 5vmin 10vmin;*/
-    position:-ms-device-fixed;
+  position:-ms-device-fixed;
   text-align:center;
   left: 50%;
   top:50%;

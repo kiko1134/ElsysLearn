@@ -1,26 +1,30 @@
-<!DOCTYPE html>
 <html lang="bg">
-<head>
-  <title>Login</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel = "stylesheet" href="../static/css/login1.css">
+        <link rel = "stylesheet" href="../static/css/login1.css">
+    </head>
 
-</head>
+    <body>
+        <canvas id='canv'>
 
-<body>
-  <div class = "form">
-    <form action="" method="post" class="login-page"></form>
-</div>  
+        </canvas>
+            <div class = "container">
+            <form action="" method="post" class="login-page">
 
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+            </form>
+        </div>
 
-    <script type="text/babel" src="/static/js/Login/Login1.js"></script>
-    <script type="text/babel">
-        ReactDOM.render(<Login1/>, document.querySelector('.login-page'))
-    </script>
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-</body>
+        <script type="text/babel" src="/static/js/Login/Login1.js"></script>
+        <script type="text/babel">
+            ReactDOM.render(<Login1/>, document.querySelector('.login-page'))
+        </script>
+        <script type="text/javascript" src="/static/js/Login/Background.js"></script>
+    </body>
+</html>
