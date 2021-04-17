@@ -18,8 +18,8 @@ def home():
 def index():
 
     message = ''
-    if "email" in session:
-        return redirect(url_for("logged_in"))
+    # if "email" in session:
+    #     return redirect(url_for("logged_in"))
 
     if request.method == "POST":
         user = request.form.get("fullname")
@@ -48,15 +48,15 @@ def index():
             user_data = records.find_one({"email": email})
             new_email = user_data['email']
    
-            return render_template('logged_in.html', email=new_email)
+            return render_template('home.html', email=new_email)
     return render_template('register1.html')
 
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
     message = 'Please login to your account'
-    if "email" in session:
-        return redirect(url_for("logged_in"))
+    # if "email" in session:
+    #     return redirect(url_for("logged_in"))
         
 
     if request.method == "POST":
@@ -97,9 +97,9 @@ def logged_in():
 def logout():
     if "email" in session:
         session.pop("email", None)
-        return render_template("signout.html")
+        return render_template("home.html")
     else:
-        return render_template('index.html')
+        return render_template('register.html')
         
 
 
