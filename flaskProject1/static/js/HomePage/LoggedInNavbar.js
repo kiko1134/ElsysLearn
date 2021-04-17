@@ -38,7 +38,7 @@ class Navbar extends React.Component {
                                 <a href="#" className="nav-link"> Profile: {this.state.name}</a>
                             </li>
                             <li className="nav-item">
-                                <a href="#"  className="nav-link"> LogOut</a>
+                                <a href="/logout"  className="nav-link"> LogOut</a>
                             </li>
                         </ul>
                       </>
