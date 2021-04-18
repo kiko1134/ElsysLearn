@@ -72,5 +72,5 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 
 ## What I have demonstrated
 
-In this POC I have demonstration a Login/Registrarion form using MongoDB for data storage and Flask
+In this POC I have demonstrated a Login/Registrarion form using MongoDB for data storage and Flask for it's interpretation
 
