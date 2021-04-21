@@ -1,19 +1,18 @@
 <html lang="bg">
     <head>
-        <title>Register</title>
+        <title>Login</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel = "stylesheet" href="../static/css/register1.css">
+        <link rel = "stylesheet" href="../static/css/login.css">
     </head>
-
 
     <body>
         <canvas id='canv'>
 
         </canvas>
-        <div class = "container">
-            <form action="" method="post" class="register">
+            <div class = "container">
+            <form action="" method="post" class="login-page">
 
             </form>
         </div>
@@ -22,11 +21,10 @@
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        <script type="text/babel" src="/static/js/Register/Register1.js"></script>
+        <script type="text/babel" src="/static/js/Login/Login.js"></script>
         <script type="text/babel">
-            ReactDOM.render(<Register1/>, document.querySelector('.register'))
+            ReactDOM.render(<Login/>, document.querySelector('.login-page'))
         </script>
-
-        <script type="text/javascript" src="/static/js/Register/Background.js"></script>
+        <script type="text/javascript" src="/static/js/Login/Background.js"></script>
     </body>
 </html>
