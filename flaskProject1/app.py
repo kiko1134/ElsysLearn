@@ -102,6 +102,14 @@ def logout():
 def elevenklass():
     return render_template("class11.html")
 
+@app.route("/dblist")
+def dblist():
+    return render_template("dblessons.html")
+
+@app.route("/Overall")
+def overall():
+    return render_template("Overall.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
