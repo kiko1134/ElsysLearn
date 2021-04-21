@@ -102,6 +102,11 @@ def logout():
         return render_template('register.html')
         
 
+@app.route("/11klass")
+def elevenklass():
+	return render_template("11class.html");
+	
+
 
 if __name__ == "__main__":
   app.run(debug=True)
