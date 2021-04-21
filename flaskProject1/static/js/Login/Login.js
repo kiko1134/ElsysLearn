@@ -1,4 +1,4 @@
-class Login1 extends React.Component {
+class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

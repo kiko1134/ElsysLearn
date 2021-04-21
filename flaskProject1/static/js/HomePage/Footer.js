@@ -12,7 +12,7 @@ class Footer extends React.Component {
         return (
             <>
                 <div className="container pt-4">
-                    <section className="mb-4">
+                    <section className="mb-4" id="foot">
                         <a className="btn btn-link btn-floating btn-lg text-white m-1"
                            href="https://www.facebook.com/tues.bg" role="button" data-mdb-ripple-color="white">
                            <i className="fab fa-facebook-f">Facebook</i>
