@@ -11,7 +11,7 @@ records = db.register
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("mainpages/home.html")
 
 
 @app.route("/register", methods=['post', 'get'])
@@ -31,13 +31,13 @@ def index():
         email_found = records.find_one({"email": email})
         if user_found:
             message = 'There already is a user by that name'
-            return render_template('register.html', message=message)
+            return render_template('Login&Register/register.html', message=message)
         if email_found:
             message = 'This email already exists in database'
-            return render_template('register.html', message=message)
+            return render_template('Login&Register/register.html', message=message)
         if password1 != password2:
             message = 'Passwords should match!'
-            return render_template('register.html', message=message)
+            return render_template('Login&Register/register.html', message=message)
 
         else:
             hashed = bcrypt.hashpw(password2.encode('utf-8'), bcrypt.gensalt())
@@ -47,8 +47,8 @@ def index():
             user_data = records.find_one({"email": email})
             new_email = user_data['email']
 
-            return render_template('home.html', email=new_email)
-    return render_template('register.html')
+            return render_template('mainpages/home.html', email=new_email)
+    return render_template('Login&Register/register.html')
 
 
 @app.route("/login", methods=["POST", "GET"])
@@ -73,18 +73,18 @@ def login():
                 if "email" in session:
                     return redirect(url_for("logged_in"))
                 message = 'Wrong password'
-                return render_template('login.html', message=message)
+                return render_template('Login&Register/login.html', message=message)
         else:
             message = 'Email not found'
-            return render_template('login.html', message=message)
-    return render_template('login.html', message=message)
+            return render_template('Login&Register/login.html', message=message)
+    return render_template('Login&Register/login.html', message=message)
 
 
 @app.route('/logged_in')
 def logged_in():
     if "email" in session:
         email = session["email"]
-        return render_template('logged_in.html', email=email)
+        return render_template('mainpages/logged_in.html', email=email)
     else:
         return redirect(url_for("login"))
 
@@ -93,22 +93,22 @@ def logged_in():
 def logout():
     if "email" in session:
         session.pop("email", None)
-        return render_template("home.html")
+        return render_template("mainpages/home.html")
     else:
-        return render_template('register.html')
+        return render_template('Login&Register/register.html')
 
 
 @app.route("/class11")
 def elevenklass():
-    return render_template("class11.html")
+    return render_template("Classes/Class11/class11.html")
 
 @app.route("/dblist")
 def dblist():
-    return render_template("dblessons.html")
+    return render_template("Classes/Class11/Subjects/Databases/dblessons.html")
 
 @app.route("/Overall")
 def overall():
-    return render_template("Overall.html")
+    return render_template("Classes/Class11/Subjects/Databases/Lessons/IntoduceInSQL.html")
 
 
 if __name__ == "__main__":
