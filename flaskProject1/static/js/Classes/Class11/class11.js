@@ -32,7 +32,7 @@ class Class11 extends React.Component {
                     </div>
                     <div id="border">
                         <br/>
-                        <a id="a" href="/"> Бази данни</a>
+                        <a id="a" href="/dblist"> Бази данни</a>
                     </div>
                     <div id="border">
                         <br/>
