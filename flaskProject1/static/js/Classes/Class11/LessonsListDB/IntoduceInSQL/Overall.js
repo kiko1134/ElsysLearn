@@ -16,9 +16,9 @@ class DBList extends React.Component {
                 <br/>
                 <br/>
             <div id = "video_exercise">                
-                <video width="960" height="540" controls>
-                    <source src="images/SampleVideo_1280x720_20mb.mp4" type="video/mp4"></source>                    
-                </video>
+            <iframe width="960" height="540"
+                src="https://www.youtube.com/watch?v=dQw4w9WgXcQ?controls=1">
+            </iframe> 
                  
                 <h2> Упражнение:</h2>
 
