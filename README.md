@@ -53,7 +53,7 @@ This command is used to update the content of a document.\
 Down bellow I will show a little demonstration of this query
 
 Let's consider that our collection has these documents:
-```
+``` mongodb
   { "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
   { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
   { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}  
@@ -61,7 +61,7 @@ Let's consider that our collection has these documents:
 If we execute this command it will change the title of the document\
 which MongoDB Overview and replace it wth New MongoDB Overview
 
-```
+``` mongodb
 >db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 >db.mycol.find()
