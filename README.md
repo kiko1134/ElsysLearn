@@ -1,3 +1,26 @@
-Our project is a site inspired by the platform "ucha.se", which will be focused specifically on the subjects at the Technological School "Electronic Systems" at TU. All video lessons on the website will be recorded and processed by us, which would facilitate the comprehension and understanding of the information by students.
+# Uploading a YouTube video in html
 
-            If you want to learn more about our project you can check our Wiki page in the repo.
+In this POC I will show how to add a YouTube video in html.
+
+## 1. Select your YouTube video
+
+Go to YouTube and choose your video.
+
+## 2. Take it's iframe code
+
+First of all, you have to click on the button `Share`\
+Then there will be a pop up screen where you will have a lot of icons.\
+You will click on the `< >` icon which name is `Embed`\
+Then you have to copy the code given you next to your video and paste it in your html file.
+
+## 3. Check if your code is compiling and running properly
+
+Your code must look something like this:
+
+``` html
+<div id = "video_exercise">                
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/2bW3HuaAUcY" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+             allowfullscreen></iframe>
+</div>
+```
