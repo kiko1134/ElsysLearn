@@ -14,9 +14,9 @@ class Navbar extends React.Component {
         return(
             <>
                 <div className="d-flex flex-grow-1" id="nav">
-                    <div className="navbar-header" id="header">
-                        <a className="navbar-brand" href="/">ElsysLearn</a>
-                    </div>
+                    <a href="/logged_in" className="navbar-brand" id="logo">
+                        <img src="/static/images/Logo.jpg" width="190" height="190" alt="" className="d-inline-block align-middle mr-2"/>
+                    </a>
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <a href="/"  className="nav-link">   8 клас</a>

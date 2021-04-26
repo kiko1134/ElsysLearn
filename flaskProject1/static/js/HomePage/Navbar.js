@@ -10,11 +10,9 @@ class Navbar extends React.Component {
     render() {
         return(
             <>
-                <div className="d-flex flex-grow-1">
-                    <div className="navbar-header">
-                        <a className="navbar-brand" href="#">ElsysLearn</a>
-                    </div>
-                </div>
+                <a href="/" className="navbar-brand" id="logo">
+                    <img src="/static/images/Logo.jpg" width="190" height="190" alt="" className="d-inline-block align-middle mr-2"/>
+                </a>
 
                 <div className="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
                     <>
