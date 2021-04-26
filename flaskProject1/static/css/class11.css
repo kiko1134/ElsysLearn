@@ -116,3 +116,8 @@ h2{
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+#logo{
+  margin-top: -77px;
+  margin-bottom: -100px;
+}

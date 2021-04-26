@@ -88,3 +88,8 @@ footer{
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+#logo{
+  margin-top: -80px;
+  margin-bottom: -100px;
+}
