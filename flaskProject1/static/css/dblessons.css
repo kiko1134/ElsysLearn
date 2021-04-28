@@ -21,7 +21,7 @@ body{
   box-sizing:border-box;
   left:50%;
   padding: 5vmin 10vmin;
-  position:fixed;
+  position: relative;
   text-align:center;
   top:50%;
   transform:translate(-50%, -50%);
@@ -30,7 +30,7 @@ body{
 
 .Footer{
   text-align:center;
-  height: 50px;
+  height: 57px;
 }
 
 i{
@@ -40,12 +40,6 @@ i{
 h1{
   margin-top: -10px;
   margin-bottom: 15px;
-  color: #373b3e;
-}
-
-h2{
-  float: left;
-  margin-left: -60px;
   color: #373b3e;
 }
 
@@ -91,11 +85,14 @@ h2{
 
 #video_exercise h2{
   margin-top: 18px;
-  float: none;
+  float: left;
+  color: #373b3e;
 }
 
 #quiz{
   float: left;
+  margin-top: 70px;
+  margin-left: -150px;
 }
 
 #quiz p{
@@ -108,6 +105,7 @@ h2{
 }
 
 #button{
+  float: right;
   height: 40px;
   width: 160px;
   font-size: 23px;
@@ -130,3 +128,38 @@ h2{
   margin-top: -77px;
   margin-bottom: -100px;
 }
+
+#Test{
+  float: left;
+}
+
+#test_button{
+  float: right;
+  font-size: 23px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #474b4e;
+  border:solid 1px #474b4e;
+  border-radius: 4px;
+  color: white;
+  margin-top: 23px;
+  margin-right: 10px;
+}
+
+#test_button:hover{
+  text-decoration: none;
+  background-color: #373b3e;
+  border:solid 1px #373b3e;
+  border-radius: 4px;
+  color: white;
+}
+
+#question{
+  text-align: left;
+  border:solid 3px #474b4e;
+  border-radius: 4px;
+  width: 900px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+
