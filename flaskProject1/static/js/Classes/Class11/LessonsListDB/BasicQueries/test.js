@@ -15,11 +15,11 @@ class Test extends React.Component {
         var q6 = document.quiz.question6.value;
         var grade = 0;
 
-        if (q1 === "Option3"){grade++}
-        if (q2 === "Option2"){grade++}
+        if (q1 === "Option4"){grade++}
+        if (q2 === "Option3"){grade++}
         if (q3 === "Option1"){grade++}
-        if (q4 === "Option2"){grade++}
-        if (q5 === "Option3"){grade++}
+        if (q4 === "Option1"){grade++}
+        if (q5 === "Option2"){grade++}
         if (q6 === "Option2"){grade++}
 
         if (grade>4){
