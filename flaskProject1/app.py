@@ -115,5 +115,9 @@ def overall():
 def overall1():
     return render_template("Classes/Class11/Subjects/Databases/Lessons/TablesDB.html")
 
+@app.route("/OverallDB4")
+def overall3():
+    return render_template("Classes/Class11/Subjects/Databases/Lessons/AgregateFunctions.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

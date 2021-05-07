@@ -24,11 +24,11 @@ class DBList extends React.Component {
                     </div>
                     <div id="border">
                         <br/>
-                        <a id="a" href="/"> Основни агрегатни функции </a>
+                        <a id="a" href="/OverallDB3"> Основни заявки</a>
                     </div>
                     <div id="border">
                         <br/>
-                        <a id="a" href="/">Основни заявки</a>
+                        <a id="a" href="/OverallDB4">Основни агрегатни функции</a>
                     </div>
                     <div id="border">
                         <br/>

@@ -19,7 +19,7 @@ class Test extends React.Component {
         if (q2 === "Option1"){grade++}
         if (q3 === "Option3"){grade++}
         if (q4 === "Option2"){grade++}
-        if (q5 === "Option3"){grade++}
+        if (q5 === "Option4"){grade++}
         if (q6 === "Option2"){grade++}
 
         if (grade>4){
@@ -70,11 +70,11 @@ class Test extends React.Component {
                 </div>
 
                 <div id="question">
-                    <p>5.Колко на брой таблици можем да имаме?</p>
-                    <p><input type="radio" name="question5" value="Option1"/>a) Колкото искаме</p>
-                    <p><input type="radio" name="question5" value="Option2"/>b) Точно определен брой</p>
-                    <p><input type="radio" name="question5" value="Option3"/>c) Колкото ни позволява паметта</p>
-                    <p><input type="radio" name="question5" value="Option4"/>d) Нито един от изброените</p>
+                    <p>5.Каква е разликата между char и varchar?</p>
+                    <p><input type="radio" name="question5" value="Option1"/>a) Няма разлика</p>
+                    <p><input type="radio" name="question5" value="Option2"/>b) varchar е по голямо от char</p>
+                    <p><input type="radio" name="question5" value="Option3"/>c) varchar е с фиксирана дължина, докато char е с променлива</p>
+                    <p><input type="radio" name="question5" value="Option4"/>d) varchar е с променлива дължина, докато char е с фиксирана</p>
                 </div>
 
                 <div id="question">
