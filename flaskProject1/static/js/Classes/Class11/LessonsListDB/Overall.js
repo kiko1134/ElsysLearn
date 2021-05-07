@@ -16,11 +16,11 @@ class DBList extends React.Component {
                 <div id="sub">
                     <div id="border">
                         <br/>
-                        <a id="a" href="/Overall"> Въведение в SQL</a>
+                        <a id="a" href="/OverallDB1"> Въведение в SQL</a>
                     </div>
                     <div id="border">
                         <br/>
-                        <a href="/"> Създаване на таблици</a>
+                        <a href="/OverallDB2"> Създаване на таблици</a>
                     </div>
                     <div id="border">
                         <br/>

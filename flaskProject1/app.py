@@ -106,10 +106,14 @@ def elevenklass():
 def dblist():
     return render_template("Classes/Class11/Subjects/Databases/dblessons.html")
 
-@app.route("/Overall")
+@app.route("/OverallDB1")
 def overall():
     return render_template("Classes/Class11/Subjects/Databases/Lessons/IntoduceInSQL.html")
 
+
+@app.route("/OverallDB2")
+def overall1():
+    return render_template("Classes/Class11/Subjects/Databases/Lessons/TablesDB.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
