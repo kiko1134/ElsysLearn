@@ -15,10 +15,10 @@ class Test extends React.Component {
         var q6 = document.quiz.question6.value;
         var grade = 0;
 
-        if (q1 === "Option2"){grade++}
-        if (q2 === "Option3"){grade++}
-        if (q3 === "Option1"){grade++}
-        if (q4 === "Option4"){grade++}
+        if (q1 === "Option3"){grade++}
+        if (q2 === "Option1"){grade++}
+        if (q3 === "Option3"){grade++}
+        if (q4 === "Option2"){grade++}
         if (q5 === "Option3"){grade++}
         if (q6 === "Option2"){grade++}
 
@@ -38,43 +38,43 @@ class Test extends React.Component {
         return (
             <form name="quiz" id="quiz">
                 <div id="question">
-                    <p>1. Какво означава съкращението SQL?</p>
-                    <p><input type="radio" name="question1" value="Option1"/>a) Standart Query Language</p>
-                    <p><input type="radio" name="question1" value="Option2"/>b) Structured Query Language</p>
-                    <p><input type="radio" name="question1" value="Option3"/>c) Styled Question Language</p>
-                    <p><input type="radio" name="question1" value="Option4"/>d) Stylistic Query Language</p>
+                    <p>1. Коя е основната градивна единица на една база в MySQL?</p>
+                    <p><input type="radio" name="question1" value="Option1"/>a) редове</p>
+                    <p><input type="radio" name="question1" value="Option2"/>b) документи</p>
+                    <p><input type="radio" name="question1" value="Option3"/>c) таблици</p>
+                    <p><input type="radio" name="question1" value="Option4"/>d) колекции</p>
                 </div>
 
                 <div id="question">
-                    <p>2.Кое не представлява база данни?</p>
-                    <p><input type="radio" name="question2" value="Option1"/>a) Mysql</p>
-                    <p><input type="radio" name="question2" value="Option2"/>b) MongoDB</p>
-                    <p><input type="radio" name="question2" value="Option3"/>c) PHP</p>
-                    <p><input type="radio" name="question2" value="Option4"/>d) SQLite</p>
+                    <p>2.Кое е правилно изписано?</p>
+                    <p><input type="radio" name="question2" value="Option1"/>a) create table t(...);</p>
+                    <p><input type="radio" name="question2" value="Option2"/>b) get table(...);</p>
+                    <p><input type="radio" name="question2" value="Option3"/>c) create table[...]</p>
+                    <p><input type="radio" name="question2" value="Option4"/>d) use table[...];</p>
                 </div>
 
                 <div id="question">
-                    <p>3.Коя команда, ако бъде изпълнена, ще създаде база?</p>
-                    <p><input type="radio" name="question3" value="Option1"/>a) create database dbname</p>
-                    <p><input type="radio" name="question3" value="Option2"/>b) create db dbname</p>
-                    <p><input type="radio" name="question3" value="Option3"/>c) insert database dbname</p>
-                    <p><input type="radio" name="question3" value="Option4"/>d) put db dbname</p>
+                    <p>3.Как се отделят елементите в таблица?</p>
+                    <p><input type="radio" name="question3" value="Option1"/>a) С растояние</p>
+                    <p><input type="radio" name="question3" value="Option2"/>b) С точка и запетая</p>
+                    <p><input type="radio" name="question3" value="Option3"/>c) Със запетая</p>
+                    <p><input type="radio" name="question3" value="Option4"/>d) С наклонена черта</p>
                 </div>
 
                 <div id="question">
-                    <p>4.Коя команда казва, че ще изпозлваме дадена база?</p>
-                    <p><input type="radio" name="question4" value="Option1"/>a) using dbname</p>
-                    <p><input type="radio" name="question4" value="Option2"/>b) run dbname</p>
-                    <p><input type="radio" name="question4" value="Option3"/>c) try dbname</p>
-                    <p><input type="radio" name="question4" value="Option4"/>d) use dbname</p>
+                    <p>4.Има ли значение подредбата на името и типа когато задаваме елемент в таблица?</p>
+                    <p><input type="radio" name="question4" value="Option1"/>a) Не</p>
+                    <p><input type="radio" name="question4" value="Option2"/>b) Да, първо се пише типа и след това името</p>
+                    <p><input type="radio" name="question4" value="Option3"/>c) Да, първо се пише името и след това типа</p>
+                    <p><input type="radio" name="question4" value="Option4"/>d) Подребата зависи от вида на таблицата</p>
                 </div>
 
                 <div id="question">
-                    <p>5.Кой от тези типове е число със запетая?</p>
-                    <p><input type="radio" name="question5" value="Option1"/>a) int</p>
-                    <p><input type="radio" name="question5" value="Option2"/>b) smallint</p>
-                    <p><input type="radio" name="question5" value="Option3"/>c) float</p>
-                    <p><input type="radio" name="question5" value="Option4"/>d) real</p>
+                    <p>5.Колко на брой таблици можем да имаме?</p>
+                    <p><input type="radio" name="question5" value="Option1"/>a) Колкото искаме</p>
+                    <p><input type="radio" name="question5" value="Option2"/>b) Точно определен брой</p>
+                    <p><input type="radio" name="question5" value="Option3"/>c) Колкото ни позволява паметта</p>
+                    <p><input type="radio" name="question5" value="Option4"/>d) Нито един от изброените</p>
                 </div>
 
                 <div id="question">
