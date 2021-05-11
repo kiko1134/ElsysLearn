@@ -11,7 +11,7 @@ class DBList extends React.Component {
     render() {
         return (
             <>
-            <h1>Въведение в SQL</h1>
+            <h1>Основни заявки</h1>
 
             <div id = "video_exercise">
                 <h2>Видео  Урок:</h2>

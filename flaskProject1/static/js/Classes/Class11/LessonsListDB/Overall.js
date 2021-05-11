@@ -32,7 +32,7 @@ class DBList extends React.Component {
                     </div>
                     <div id="border">
                         <br/>
-                        <a id="a" href="/"> Създаване на връзки между таблици</a>
+                        <a id="a" href="/OverallDB5"> Създаване на връзки между таблици</a>
                     </div>
                     <div id="border">
                         <br/>
