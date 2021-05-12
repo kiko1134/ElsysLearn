@@ -39,7 +39,7 @@ class Footer extends React.Component {
                            <i className="fab fa-linkedin">Linkedin</i>
                         </a>
 
-                        <a className="btn btn-link btn-floating btn-lg text-white m-1" href="https://github.com/elsys"
+                        <a className="btn btn-link btn-floating btn-lg text-white m-1" href="https://github.com/kiko1134/ElsysLearn"
                            role="button" data-mdb-ripple-color="white" target="_blank">
                            <i className="fab fa-github">GitHub</i>
                         </a>
