@@ -36,7 +36,7 @@ class DBList extends React.Component {
                     </div>
                     <div id="border">
                         <br/>
-                        <a href="/"> Джойн заявки </a>
+                        <a href="/OverallDB6"> Джойн заявки </a>
                     </div>
                 </div>
             </>

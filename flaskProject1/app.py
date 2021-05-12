@@ -127,6 +127,9 @@ def overall3():
 def overall4():
     return render_template("Classes/Class11/Subjects/Databases/Lessons/ConnectionTable.html")
 
+@app.route("/OverallDB6")
+def overall5():
+    return render_template("Classes/Class11/Subjects/Databases/Lessons/JoinQueries.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
