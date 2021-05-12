@@ -11,7 +11,7 @@ class DBList extends React.Component {
     render() {
         return (
             <>
-            <h1>Връзки между таблиците</h1>
+            <h1>Джой заявки</h1>
 
             <div id = "video_exercise">
                 <h2>Видео  Урок:</h2>
@@ -22,6 +22,12 @@ class DBList extends React.Component {
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                  allowfullscreen></iframe>
                  
+                {/* <button class="like__btn">
+                    <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                    <span id="count">0</span> Like
+                </button>
+
+                <script src="/home/kris/Desktop/ElsysLearn/flaskProject1/static/js/button.js"> </script> */}
                 <h2> Упражнение:</h2>
 
                 <div id="Test">
