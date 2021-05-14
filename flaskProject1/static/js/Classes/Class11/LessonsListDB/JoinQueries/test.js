@@ -23,7 +23,7 @@ class Test extends React.Component {
         if (q6 === "Option2"){grade++}
 
         if (grade>4){
-            alert("Поздравления, Васил! Вие сте гений! Оценка: " + grade)
+            alert("Поздравления! Оценка: " + grade)
         }
         else if(grade>2 && grade<5){
             alert("Вашата оценка е: " + grade + ". Може би бихте искали да изгледате видеото наново?")
@@ -54,38 +54,38 @@ class Test extends React.Component {
                 </div>
 
                 <div id="question">
-                    <p>2. Какво прави Left join?</p>
-                    <p><input type="radio" name="question2" value="Option1"/>a) Взима общите елементи на две таблици</p>
-                    <p><input type="radio" name="question2" value="Option2"/>b) Взима всички елементи от лявата таблица и общите между двете</p>
-                    <p><input type="radio" name="question2" value="Option3"/>c) Взима всички елементи от дясната таблица и общите между двете</p>
-                    <p><input type="radio" name="question2" value="Option4"/>d) Нито един от посочените</p>
+                    <p>3. Какво прави Left join?</p>
+                    <p><input type="radio" name="question3" value="Option1"/>a) Взима общите елементи на две таблици</p>
+                    <p><input type="radio" name="question3" value="Option2"/>b) Взима всички елементи от лявата таблица и общите между двете</p>
+                    <p><input type="radio" name="question3" value="Option3"/>c) Взима всички елементи от дясната таблица и общите между двете</p>
+                    <p><input type="radio" name="question3" value="Option4"/>d) Нито един от посочените</p>
                 </div>
 
                 <div id="question">
-                    <p>2. Какво прави Right join?</p>
-                    <p><input type="radio" name="question2" value="Option1"/>a) Взима общите елементи на две таблици</p>
-                    <p><input type="radio" name="question2" value="Option2"/>b) Взима всички елементи от лявата таблица и общите между двете</p>
-                    <p><input type="radio" name="question2" value="Option3"/>c) Взима всички елементи от дясната таблица и общите между двете</p>
-                    <p><input type="radio" name="question2" value="Option4"/>d) Нито един от посочените</p>
+                    <p>4. Какво прави Right join?</p>
+                    <p><input type="radio" name="question4" value="Option1"/>a) Взима общите елементи на две таблици</p>
+                    <p><input type="radio" name="question4" value="Option2"/>b) Взима всички елементи от лявата таблица и общите между двете</p>
+                    <p><input type="radio" name="question4" value="Option3"/>c) Взима всички елементи от дясната таблица и общите между двете</p>
+                    <p><input type="radio" name="question4" value="Option4"/>d) Нито един от посочените</p>
                 </div>
 
                 <div id="question">
                     <p>5. Кое е жизненоважно, за да можем да осъществим join между две таблици?</p>
-                    <p><input type="radio" name="question2" value="Option1"/>a) Да имат еднакъв брой променливи</p>
-                    <p><input type="radio" name="question2" value="Option2"/>b) Да имат колона, която и в двете таблици играе една и съща роля</p>
-                    <p><input type="radio" name="question2" value="Option3"/>c) Да имат timestamp</p>
-                    <p><input type="radio" name="question2" value="Option4"/>d) Нито един от посочените</p>
+                    <p><input type="radio" name="question5" value="Option1"/>a) Да имат еднакъв брой променливи</p>
+                    <p><input type="radio" name="question5" value="Option2"/>b) Да имат колона, която и в двете таблици играе една и съща роля</p>
+                    <p><input type="radio" name="question5" value="Option3"/>c) Да имат timestamp</p>
+                    <p><input type="radio" name="question5" value="Option4"/>d) Нито един от посочените</p>
                 </div>
 
                 <div id="question">
-                    <p>5. Може ли в една джойн заявка да вкараме друга?</p>
-                    <p><input type="radio" name="question2" value="Option1"/>a) Да</p>
-                    <p><input type="radio" name="question2" value="Option2"/>b) Не</p>
-                    <p><input type="radio" name="question2" value="Option3"/>c) Само в някои случаи</p>
-                    <p><input type="radio" name="question2" value="Option4"/>d) Нито един от посочените</p>
+                    <p>6. Може ли в една джойн заявка да вкараме друга?</p>
+                    <p><input type="radio" name="question6" value="Option1"/>a) Да</p>
+                    <p><input type="radio" name="question6" value="Option2"/>b) Не</p>
+                    <p><input type="radio" name="question6" value="Option3"/>c) Само в някои случаи</p>
+                    <p><input type="radio" name="question6" value="Option4"/>d) Нито един от посочените</p>
                 </div>
 
-                <input type="button" name="" value="I'm done!" id="button" onClick={this.Check}/>
+                <input type="button" name="" value="Предай" id="button" onClick={this.Check}/>
             </form>
         )
     }

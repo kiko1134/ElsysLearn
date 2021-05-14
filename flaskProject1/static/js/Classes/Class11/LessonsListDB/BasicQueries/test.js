@@ -23,7 +23,7 @@ class Test extends React.Component {
         if (q6 === "Option2"){grade++}
 
         if (grade>4){
-            alert("Поздравления, Васил! Вие сте гений! Оценка: " + grade)
+            alert("Поздравления! Оценка: " + grade)
         }
         else if(grade>2 && grade<5){
             alert("Вашата оценка е: " + grade + ". Може би бихте искали да изгледате видеото наново?")
@@ -71,10 +71,10 @@ class Test extends React.Component {
 
                 <div id="question">
                 <p>5. Какво означава съкращението SQL?</p>
-                    <p><input type="radio" name="question1" value="Option1"/>a) Standart Query Language</p>
-                    <p><input type="radio" name="question1" value="Option2"/>b) Structured Query Language</p>
-                    <p><input type="radio" name="question1" value="Option3"/>c) Styled Question Language</p>
-                    <p><input type="radio" name="question1" value="Option4"/>d) Stylistic Query Language</p>
+                    <p><input type="radio" name="question5" value="Option1"/>a) Standart Query Language</p>
+                    <p><input type="radio" name="question5" value="Option2"/>b) Structured Query Language</p>
+                    <p><input type="radio" name="question5" value="Option3"/>c) Styled Question Language</p>
+                    <p><input type="radio" name="question5" value="Option4"/>d) Stylistic Query Language</p>
                 </div>
 
                 <div id="question">
@@ -85,7 +85,7 @@ class Test extends React.Component {
                     <p><input type="radio" name="question6" value="Option4"/>d) NoSQL database</p>
                 </div>
 
-                <input type="button" name="" value="I'm done!" id="button" onClick={this.Check}/>
+                <input type="button" name="" value="Предай" id="button" onClick={this.Check}/>
             </form>
         )
     }
