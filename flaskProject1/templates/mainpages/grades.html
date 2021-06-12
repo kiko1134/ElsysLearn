@@ -1,0 +1,68 @@
+<html lang="bg">
+    <head>
+        <title>Grades</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel = "stylesheet" href="../../static/css/grades.css">
+
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" class="Navbar">
+
+        </nav>
+
+        <div class="container">
+            <div class="content">
+                <h1>Username(Email): {Username}({Email})</h1>
+                <h2>Средни оценки</h2>
+                <div id="grades">
+                    <h2 id="Subject">Предмет:</h2>
+                    <h2 class="Grades">Оценка:</h2>
+                    <div id="table">
+                        <p class="Subject">Математика</p>
+                        <p>6</p>
+                        <p class="Subject add">ООП</p>
+                        <p class="add">5</p>
+                        <p class="Subject add">Разработка на софтуер</p>
+                        <p class="add">6</p>
+                        <p class="Subject add">Оерационни системи</p>
+                        <p class="add">5</p>
+                        <p class="Subject add">Бази данни</p>
+                        <p class="add">6</p>
+                        <p class="Subject add">МОП</p>
+                        <p class="add">6</p>
+                        <p class="Subject add last"></p>
+                        <p class="add last"></p>
+                        <p class="Subject add last last1"></p>
+                        <p class="add last1 last"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <footer className="text-center text-white bg-dark" class="Footer" style="background-color: #343a40">
+
+        </footer>
+
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel" src="/static/js/HomePage/LoggedInNavbar.js"></script>
+        <script type="text/babel">
+            ReactDOM.render(<Navbar/>, document.querySelector('.Navbar'))
+        </script>
+
+        <script type="text/babel" src="../../static/js/HomePage/Footer.js"></script>
+        <script type="text/babel">
+            ReactDOM.render(<Footer/>, document.querySelector('.Footer'))
+        </script>
+    </body>
+</html>

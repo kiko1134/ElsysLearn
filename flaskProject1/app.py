@@ -16,7 +16,6 @@ def home():
 
 @app.route("/register", methods=['post', 'get'])
 def index():
-
     # message = ''
     # if "email" in session:
     #     return redirect(url_for("logged_in"))
@@ -131,6 +130,10 @@ def overall4():
 @app.route("/OverallDB6")
 def overall5():
     return render_template("Classes/Class11/Subjects/Databases/Lessons/JoinQueries.html")
+
+@app.route("/grades")
+def grades():
+    return render_template("mainpages/grades.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
