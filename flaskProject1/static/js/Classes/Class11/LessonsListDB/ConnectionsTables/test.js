@@ -23,7 +23,7 @@ class Test extends React.Component {
         if (q6 === "Option2"){grade++}
 
         if (grade>4){
-            alert("Поздравления, Васил! Вие сте гений! Оценка: " + grade)
+            alert("Поздравления! Оценка: " + grade)
         }
         else if(grade>2 && grade<5){
             alert("Вашата оценка е: " + grade + ". Може би бихте искали да изгледате видеото наново?")
@@ -55,37 +55,37 @@ class Test extends React.Component {
 
                 <div id="question">
                     <p>3. Как имплементираме връзката Many to many?</p>
-                    <p><input type="radio" name="question2" value="Option1"/>a) Като направим unique foreign key във втората таблица</p>
-                    <p><input type="radio" name="question2" value="Option2"/>b) Като направим foreign key във втората таблица</p>
-                    <p><input type="radio" name="question2" value="Option3"/>c) Като си направим трета таблица, чрез която се осъществява връзката ,между главните две</p>
-                    <p><input type="radio" name="question2" value="Option4"/>d) Нито един от посочените</p>
+                    <p><input type="radio" name="question3" value="Option1"/>a) Като направим unique foreign key във втората таблица</p>
+                    <p><input type="radio" name="question3" value="Option2"/>b) Като направим foreign key във втората таблица</p>
+                    <p><input type="radio" name="question3" value="Option3"/>c) Като си направим трета таблица, чрез която се осъществява връзката ,между главните две</p>
+                    <p><input type="radio" name="question3" value="Option4"/>d) Нито един от посочените</p>
                 </div>
 
                 <div id="question">
                     <p>4. Как имплементираме връзката One to many?</p>
-                    <p><input type="radio" name="question2" value="Option1"/>a) Като направим unique foreign key във втората таблица</p>
-                    <p><input type="radio" name="question2" value="Option2"/>b) Като направим foreign key във втората таблица</p>
-                    <p><input type="radio" name="question2" value="Option3"/>c) Като си направим трета таблица, чрез която се осъществява връзката ,между главните две</p>
-                    <p><input type="radio" name="question2" value="Option4"/>d) Нито един от посочените</p>
+                    <p><input type="radio" name="question4" value="Option1"/>a) Като направим unique foreign key във втората таблица</p>
+                    <p><input type="radio" name="question4" value="Option2"/>b) Като направим foreign key във втората таблица</p>
+                    <p><input type="radio" name="question4" value="Option3"/>c) Като си направим трета таблица, чрез която се осъществява връзката ,между главните две</p>
+                    <p><input type="radio" name="question4" value="Option4"/>d) Нито един от посочените</p>
                 </div>
 
                 <div id="question">
                     <p>5. Ако имаме задача, в която се казва, че един човек може да има много оценки, коя връзка трябва да изпозлваме?</p>
-                    <p><input type="radio" name="question2" value="Option1"/>a) One to many</p>
-                    <p><input type="radio" name="question2" value="Option2"/>b) One to one</p>
-                    <p><input type="radio" name="question2" value="Option3"/>c) Нито едно от посочените</p>
-                    <p><input type="radio" name="question2" value="Option4"/>d) Many to many</p>
+                    <p><input type="radio" name="question5" value="Option1"/>a) One to many</p>
+                    <p><input type="radio" name="question5" value="Option2"/>b) One to one</p>
+                    <p><input type="radio" name="question5" value="Option3"/>c) Нито едно от посочените</p>
+                    <p><input type="radio" name="question5" value="Option4"/>d) Many to many</p>
                 </div>
 
                 <div id="question">
                     <p>5. Ако имаме задача, в която се казва, че един човек може да има само една оценка, коя връзка трябва да изпозлваме?</p>
-                    <p><input type="radio" name="question2" value="Option1"/>a) One to many</p>
-                    <p><input type="radio" name="question2" value="Option2"/>b) One to one</p>
-                    <p><input type="radio" name="question2" value="Option3"/>c) Нито едно от посочените</p>
-                    <p><input type="radio" name="question2" value="Option4"/>d) Many to many</p>
+                    <p><input type="radio" name="question6" value="Option1"/>a) One to many</p>
+                    <p><input type="radio" name="question6" value="Option2"/>b) One to one</p>
+                    <p><input type="radio" name="question6" value="Option3"/>c) Нито едно от посочените</p>
+                    <p><input type="radio" name="question6" value="Option4"/>d) Many to many</p>
                 </div>
 
-                <input type="button" name="" value="I'm done!" id="button" onClick={this.Check}/>
+                <input type="button" name="" value="Предай" id="button" onClick={this.Check}/>
             </form>
         )
     }

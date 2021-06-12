@@ -15,4 +15,5 @@ likeBtn.addEventListener("click", () => {
     likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
     count.textContent--;
   }
+
 });
