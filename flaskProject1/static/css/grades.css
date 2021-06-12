@@ -1,0 +1,116 @@
+body{
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(../images/Grades.jpeg );
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.container{
+    flex:1;
+}
+.content{
+    background-color:rgba(255,255,255,255);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0, 0, 0, 0.25);
+    box-sizing:border-box;
+    left:50%;
+    padding: 5vmin 10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+    margin-top: -25px;
+    height: 685px;
+}
+
+.Footer{
+    text-align:center;
+    height: 80px;
+}
+
+#nav a {
+    font-size: 19px;
+}
+
+.Navbar{
+    height: 50px;
+}
+
+#logo{
+  margin-top: -77px;
+  margin-bottom: -100px;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+#Subject{
+    float: left;
+    margin-top: -1px;
+    margin-right: 420px;
+}
+
+.Grades{
+    margin-top: 60px;
+}
+
+.last{
+  height: 40px;
+}
+
+.last1{
+    border-bottom: none;
+    margin-bottom: -20px;
+}
+
+#table{
+    height: 380px;
+    width: 800px;
+    border:solid 4px #474b4e;
+    border-radius: 4px;
+    margin-top: 20px;
+    overflow: auto;
+}
+
+p{
+    font-size: 30px;
+    border-bottom: #474B4EFF solid 3px;
+    border-right: #474B4EFF solid 3px;
+    margin-top: auto;
+}
+.add{
+    margin-top: -16px;
+}
+
+.Subject{
+    float: left;
+    width: 600px;
+    text-align: left;
+    margin-left: 5px;
+    border-left: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d5d5d5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

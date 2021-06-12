@@ -47,7 +47,6 @@ class DBList extends React.Component {
                     <span id="count">0</span> Like
                 </button>
 
-                {/*<script src="/home/kris/Desktop/ElsysLearn/flaskProject1/static/js/button.js"></script>*/}
                 <div id="upr">
                     <h2> Упражнение:</h2>
 
