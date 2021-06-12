@@ -16,6 +16,7 @@ def home():
 
 @app.route("/register", methods=['post', 'get'])
 def index():
+
     # message = ''
     # if "email" in session:
     #     return redirect(url_for("logged_in"))
