@@ -24,6 +24,7 @@ def index():
         user = request.form.get("fullname")
         email = request.form.get("email")
 
+
         password1 = request.form.get("password1")
         password2 = request.form.get("password2")
 
