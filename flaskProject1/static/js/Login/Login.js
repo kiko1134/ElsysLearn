@@ -11,9 +11,15 @@ class Login extends React.Component {
             <>
                 <h2>LogIn</h2>
                 <div class="form-group l1">
-                    <label for="InputEmail">Username or email: </label>
+                    <label for="InputEmail">Email: </label>
                     <br/>
-                    <input name="email" class="form-control" id="InputEmail"  placeholder="Enter you username or email"/>
+                    <input name="email" class="form-control" id="InputEmail"  placeholder="Enter your email:"/>
+                </div>
+                <div className="form-group l1">
+                    <label htmlFor="EnterUsername">Username: </label>
+                    <br/>
+                    <input name="username" className="form-control" id="InputEmail"
+                           placeholder="Enter you username:"/>
                 </div>
                 <div class="form-group">
                     <label for="InputPassword">Password: </label>
