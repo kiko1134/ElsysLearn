@@ -131,9 +131,15 @@ def overall4():
 def overall5():
     return render_template("Classes/Class11/Subjects/Databases/Lessons/JoinQueries.html")
 
+
 @app.route("/grades")
 def grades():
-    return render_template("mainpages/grades.html")
+    if session["email"]:
+        email = session["email"]
+        # if session["name"]:
+        name = session['name']
+        #     return render_template("mainpages/grades.html",email = email,name = name)
+    return render_template("mainpages/grades.html",email = email, name = name)
 
 if __name__ == "__main__":
     app.run(debug=True)

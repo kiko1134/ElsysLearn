@@ -40,7 +40,7 @@ class Navbar extends React.Component {
                      <>
                         <ul className="navbar-nav ml-auto flex-nowrap">
                             <li className="nav-item">
-                                <a href="/grades" className="nav-link"> Profile: {this.state.name}</a>
+                                <a href="/grades" className="nav-link"> Profile:</a>
                             </li>
                             <li className="nav-item">
                                 <a href="/logout"  className="nav-link"  onClick={this.LoggedOut}> LogOut</a>

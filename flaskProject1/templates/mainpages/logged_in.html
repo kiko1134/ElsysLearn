@@ -12,39 +12,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" class="Navbar">
-            <div className="d-flex flex-grow-1" id="nav">
-                    <a href="/logged_in" className="navbar-brand" id="logo">
-                        <img src="/static/images/Logo.jpg" width="190" height="190" alt="" className="d-inline-block align-middle mr-2"/>
-                    </a>
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a href="/"  className="nav-link">   8 клас</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/"  className="nav-link">   9 клас</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/"  className="nav-link">   10 клас</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/class11"  className="nav-link">   11 клас</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="/"  className="nav-link">   12 клас</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7" id="nav">
-                        <ul className="navbar-nav ml-auto flex-nowrap">
-                            <li className="nav-item">
-                                <a href="#" className="nav-link"> Profile: {this.state.name}</a>
-                            </li>
-                            <li className="nav-item">
-                                <a href="/logout"  className="nav-link"  onClick={this.LoggedOut}> LogOut</a>
-                            </li>
-                        </ul>
-                </div>
+            
         </nav>
 
         <div class="parallax"></div>
@@ -77,11 +45,10 @@
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-{#        <script type="text/babel" src="/static/js/HomePage/LoggedInNavbar.js"></script>#}
-{#        <script type="text/babel">#}
-{#            ReactDOM.render(<Navbar/>, document.querySelector('.Navbar'))#}
-{#        </script>#}
-
+        <script type="text/babel" src="/static/js/HomePage/LoggedInNavbar.js"></script>
+        <script type="text/babel">
+            ReactDOM.render(<Navbar/>, document.querySelector('.Navbar'))
+        </script>
         <script type="text/babel" src="/static/js/HomePage/Footer.js"></script>
         <script type="text/babel">
             ReactDOM.render(<Footer/>, document.querySelector('.Footer'))
