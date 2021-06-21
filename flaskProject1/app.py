@@ -106,29 +106,59 @@ def elevenklass():
 def dblist():
     return render_template("Classes/Class11/Subjects/Databases/dblessons.html")
 
-@app.route("/OverallDB1")
+@app.route("/OverallDB1", methods=["GET", "POST"])
 def overall():
+    if request.method == "POST":
+        grade = request.form["Grade"]
+        print(grade)
+        Message = {"Message": "Done!"}
+        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/IntoduceInSQL.html")
 
 
-@app.route("/OverallDB2")
+@app.route("/OverallDB2", methods=["GET", "POST"])
 def overall1():
+    if request.method == "POST":
+        grade = request.form["Grade"]
+        print(grade)
+        Message = {"Message": "Done!"}
+        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/TablesDB.html")
 
-@app.route("/OverallDB3")
+@app.route("/OverallDB3", methods=["GET", "POST"])
 def overall2():
+    if request.method == "POST":
+        grade = request.form["Grade"]
+        print(grade)
+        Message = {"Message": "Done!"}
+        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/BasicQueries.html")
 
-@app.route("/OverallDB4")
+@app.route("/OverallDB4", methods=["GET", "POST"])
 def overall3():
+    if request.method == "POST":
+        grade = request.form["Grade"]
+        print(grade)
+        Message = {"Message": "Done!"}
+        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/AgregateFunctions.html")
 
-@app.route("/OverallDB5")
+@app.route("/OverallDB5", methods=["GET", "POST"])
 def overall4():
+    if request.method == "POST":
+        grade = request.form["Grade"]
+        print(grade)
+        Message = {"Message": "Done!"}
+        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/ConnectionTable.html")
 
-@app.route("/OverallDB6")
+@app.route("/OverallDB6", methods=["GET", "POST"])
 def overall5():
+    if request.method == "POST":
+        grade = request.form["Grade"]
+        print(grade)
+        Message = {"Message": "Done!"}
+        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/JoinQueries.html")
 
 
