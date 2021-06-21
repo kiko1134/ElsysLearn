@@ -7,6 +7,7 @@ class Test extends React.Component {
     }
 
     Check(){
+        var server = "http://127.0.0.1:5000/"
         var q1 = document.quiz.question1.value;
         var q2 = document.quiz.question2.value;
         var q3 = document.quiz.question3.value;
@@ -21,6 +22,23 @@ class Test extends React.Component {
         if (q4 === "Option4"){grade++}
         if (q5 === "Option3"){grade++}
         if (q6 === "Option2"){grade++}
+
+        if(grade < 2){
+                grade = 2
+        }
+
+        $.ajax({
+            url:server + '/OverallDB1',
+            type:'POST',
+            data:{'Grade':grade},
+            success: function (response){
+                console.log(response);
+            },
+            error: function (error){
+                console.log(error);
+            }
+
+        })
 
         if (grade>4){
             alert("Поздравления! Оценка: " + grade)
