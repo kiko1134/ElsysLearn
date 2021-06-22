@@ -148,6 +148,8 @@ def dblist():
 @app.route("/OverallDB1", methods=["GET","POST"])
 def overall():
     if request.method == "POST":
+        name = session["name"]
+        email = session["email"]
         grade = request.form["Grade"]
         print(grade)
         DBList.append(int(grade))
@@ -156,10 +158,9 @@ def overall():
             curr = DBList[x]
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
+        g = records.update_one({"email": email}, {"$set":{"grade": avrg}})
+        # session["grade"] = avrg
         print(avrg)
-
-        Message = {"Message": "Done!"}
-        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/IntoduceInSQL.html")
 
 
@@ -247,9 +248,10 @@ def overall5():
 @app.route("/grades")
 def grades():
     if session["email"]:
+        grade = session["grade"]
         email = session["email"]
         name = session['name']
-    return render_template("mainpages/grades.html",email = email, name = name)
+    return render_template("mainpages/grades.html",email = email, name = name, grade=grade)
 
 if __name__ == "__main__":
     app.run(debug=True)
