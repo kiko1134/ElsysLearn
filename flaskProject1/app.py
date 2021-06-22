@@ -1,9 +1,23 @@
 from flask import Flask, render_template, request, url_for, redirect, session
 import pymongo
 import bcrypt
+from flask_cors import CORS, cross_origin
+from flask_mail import Mail, Message
+from itsdangerous import URLSafeTimedSerializer
 
 app = Flask(__name__)
-app.secret_key = "testing"
+app.config['SECRET_KEY'] = "testing"
+# mail = Mail(app)
+cors = CORS(app)
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'elsyslearn@gmail.com'
+app.config['MAIL_PASSWORD'] = 'tupsumpo0S'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
+serializer = URLSafeTimedSerializer(app.config["SECRET_KEY"])
+
 client = pymongo.MongoClient("mongodb+srv://kris:1234567890@cluster0.vjdqy.mongodb.net/mongotest?retryWrites=true&w=majority")
 db = client.get_database('total_records')
 records = db.register
@@ -43,12 +57,23 @@ def index():
             hashed = bcrypt.hashpw(password2.encode('utf-8'), bcrypt.gensalt())
             user_input = {'name': user, 'email': email, 'password': hashed}
             records.insert_one(user_input)
+            token = serializer.dumps(email, salt='email-confirm-key')
+            # confirm_url = url_for(
+            #     'confirm_email',
+            #     token=token,
+            #     _external=True)
+            # msg = Message('ElsysLearm Registration', sender='elsyslearn@gmail.com', recipients=[email])
+            # msg.body = "You have successfully registered to ElsysLearn. Follow the link to confirm: "
+            # mail.send(msg)
 
             user_data = records.find_one({"email": email})
             new_email = user_data['email']
 
             return render_template('mainpages/home.html', email=new_email)
     return render_template('Login&Register/register.html')
+
+# @app.route("/confirm/<token>")
+# def func(token):
 
 
 @app.route("/login", methods=["POST", "GET"])
@@ -65,9 +90,11 @@ def login():
         if email_found:
             email_val = email_found['email']
             passwordcheck = email_found['password']
+            username = email_found['name']
 
             if bcrypt.checkpw(password.encode('utf-8'), passwordcheck):
                 session["email"] = email_val
+                session["name"] = username
                 return redirect(url_for('logged_in'))
             else:
                 if "email" in session:
@@ -106,7 +133,7 @@ def elevenklass():
 def dblist():
     return render_template("Classes/Class11/Subjects/Databases/dblessons.html")
 
-@app.route("/OverallDB1", methods=["GET", "POST"])
+@app.route("/OverallDB1", methods=["GET","POST"])
 def overall():
     if request.method == "POST":
         grade = request.form["Grade"]
@@ -166,9 +193,7 @@ def overall5():
 def grades():
     if session["email"]:
         email = session["email"]
-        # if session["name"]:
         name = session['name']
-        #     return render_template("mainpages/grades.html",email = email,name = name)
     return render_template("mainpages/grades.html",email = email, name = name)
 
 if __name__ == "__main__":
