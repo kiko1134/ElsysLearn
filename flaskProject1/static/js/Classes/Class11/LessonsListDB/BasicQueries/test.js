@@ -28,7 +28,7 @@ class Test extends React.Component {
         }
 
         $.ajax({
-            url:server + '/OverallDB3',
+            url:server + 'OverallDB3',
             type:'POST',
             data:{'Grade':grade},
             success: function (response){

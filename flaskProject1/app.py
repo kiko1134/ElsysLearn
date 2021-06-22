@@ -1,3 +1,5 @@
+from typing import Any
+
 from flask import Flask, render_template, request, url_for, redirect, session
 import pymongo
 import bcrypt
@@ -7,12 +9,12 @@ from itsdangerous import URLSafeTimedSerializer
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "testing"
-# mail = Mail(app)
+mail = Mail(app)
 cors = CORS(app)
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'elsyslearn@gmail.com'
-app.config['MAIL_PASSWORD'] = 'tupsumpo0S'
+app.config['MAIL_USERNAME'] = 'elsyslearn4@gmail.com'
+app.config['MAIL_PASSWORD'] = 'Elsys007'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -22,6 +24,7 @@ client = pymongo.MongoClient("mongodb+srv://kris:1234567890@cluster0.vjdqy.mongo
 db = client.get_database('total_records')
 records = db.register
 
+DBList = []
 
 @app.route("/")
 def home():
@@ -59,12 +62,12 @@ def index():
             records.insert_one(user_input)
             token = serializer.dumps(email, salt='email-confirm-key')
             # confirm_url = url_for(
-            #     'confirm_email',
+            #     'func',
             #     token=token,
             #     _external=True)
-            # msg = Message('ElsysLearm Registration', sender='elsyslearn@gmail.com', recipients=[email])
-            # msg.body = "You have successfully registered to ElsysLearn. Follow the link to confirm: "
-            # mail.send(msg)
+            msg = Message('ElsysLearm Registration', sender='elsyslearn@gmail.com', recipients=[email])
+            msg.body = "You have successfully registered to ElsysLearn."
+            mail.send(msg)
 
             user_data = records.find_one({"email": email})
             new_email = user_data['email']
@@ -74,7 +77,16 @@ def index():
 
 # @app.route("/confirm/<token>")
 # def func(token):
-
+#     email = serializer.loads(token, salt="email-confirm-key", max_age=86400)
+#
+#     user = session
+#
+#     user.confirmed = True
+#
+#     user.confirm()
+#     app.logger.info("Successfully registered a new user!")
+#
+#     return redirect('/login')
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
@@ -138,6 +150,14 @@ def overall():
     if request.method == "POST":
         grade = request.form["Grade"]
         print(grade)
+        DBList.append(int(grade))
+        avrg = 0
+        for x in range(0, len(DBList)):
+            curr = DBList[x]
+            avrg = avrg + int(curr)
+        avrg = avrg / float(len(DBList))
+        print(avrg)
+
         Message = {"Message": "Done!"}
         return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/IntoduceInSQL.html")
@@ -148,6 +168,13 @@ def overall1():
     if request.method == "POST":
         grade = request.form["Grade"]
         print(grade)
+        DBList.append(int(grade))
+        avrg = 0
+        for x in range(0, len(DBList)):
+            curr = DBList[x]
+            avrg = avrg + int(curr)
+        avrg = avrg / float(len(DBList))
+        print(avrg)
         Message = {"Message": "Done!"}
         return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/TablesDB.html")
@@ -157,6 +184,13 @@ def overall2():
     if request.method == "POST":
         grade = request.form["Grade"]
         print(grade)
+        DBList.append(int(grade))
+        avrg = 0
+        for x in range(0, len(DBList)):
+            curr = DBList[x]
+            avrg = avrg + int(curr)
+        avrg = avrg / float(len(DBList))
+        print(avrg)
         Message = {"Message": "Done!"}
         return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/BasicQueries.html")
@@ -166,6 +200,13 @@ def overall3():
     if request.method == "POST":
         grade = request.form["Grade"]
         print(grade)
+        DBList.append(int(grade))
+        avrg = 0
+        for x in range(0, len(DBList)):
+            curr = DBList[x]
+            avrg = avrg + int(curr)
+        avrg = avrg / float(len(DBList))
+        print(avrg)
         Message = {"Message": "Done!"}
         return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/AgregateFunctions.html")
@@ -175,6 +216,13 @@ def overall4():
     if request.method == "POST":
         grade = request.form["Grade"]
         print(grade)
+        DBList.append(int(grade))
+        avrg = 0
+        for x in range(0, len(DBList)):
+            curr = DBList[x]
+            avrg = avrg + int(curr)
+        avrg = avrg / float(len(DBList))
+        print(avrg)
         Message = {"Message": "Done!"}
         return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/ConnectionTable.html")
@@ -184,6 +232,13 @@ def overall5():
     if request.method == "POST":
         grade = request.form["Grade"]
         print(grade)
+        DBList.append(int(grade))
+        avrg = 0
+        for x in range(0, len(DBList)):
+            curr = DBList[x]
+            avrg = avrg + int(curr)
+        avrg = avrg / float(len(DBList))
+        print(avrg)
         Message = {"Message": "Done!"}
         return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/JoinQueries.html")

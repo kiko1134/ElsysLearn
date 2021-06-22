@@ -4,7 +4,12 @@
     <list default="true" id="5c229ba9-2a16-4ee9-aea6-9b69c752187f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/HomePage/LoggedInNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/HomePage/LoggedInNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/AgregateFunctions/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/AgregateFunctions/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/BasicQueries/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/BasicQueries/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/ConnectionsTables/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/ConnectionsTables/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/IntoduceInSQL/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/IntoduceInSQL/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/JoinQueries/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/JoinQueries/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/Tables/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/Classes/Class11/LessonsListDB/Tables/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618427312995</updated>
       <workItem from="1618427314204" duration="424000" />
-      <workItem from="1624347491837" duration="5473000" />
+      <workItem from="1624347491837" duration="17622000" />
     </task>
     <servers />
   </component>
