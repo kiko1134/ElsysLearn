@@ -18,10 +18,10 @@ class Navbar extends React.Component {
                     <>
                         <ul className="navbar-nav ml-auto flex-nowrap">
                             <li className="nav-item">
-                                <a href="/login" className="nav-link"> Sign in</a>
+                                <a href="/login" id="login" className="nav-link"> Sign in</a>
                             </li>
                             <li className="nav-item">
-                                <a href="/register" className="nav-link"> Sign up</a>
+                                <a href="/register" id="register" className="nav-link"> Sign up</a>
                             </li>
                         </ul>
                     </>
