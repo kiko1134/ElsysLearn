@@ -34,7 +34,7 @@ class Register extends React.Component {
                     <input type="password" name="password2" class="form-control" id="InputPassword2" placeholder="Re-enter your password"/>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button name = "button" type="submit" class="btn btn-primary">Submit</button>
             </>
         )
     }

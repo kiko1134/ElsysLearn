@@ -26,7 +26,7 @@ class Login extends React.Component {
                     <br/>
                     <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Enter your password"/>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" name = "button" class="btn btn-primary">Submit</button>
             </>
         )
     }

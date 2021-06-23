@@ -167,6 +167,8 @@ def overall():
 @app.route("/OverallDB2", methods=["GET", "POST"])
 def overall1():
     if request.method == "POST":
+        name = session["name"]
+        email = session["email"]
         grade = request.form["Grade"]
         print(grade)
         DBList.append(int(grade))
@@ -175,14 +177,16 @@ def overall1():
             curr = DBList[x]
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
+        g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
+        # session["grade"] = avrg
         print(avrg)
-        Message = {"Message": "Done!"}
-        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/TablesDB.html")
 
 @app.route("/OverallDB3", methods=["GET", "POST"])
 def overall2():
     if request.method == "POST":
+        name = session["name"]
+        email = session["email"]
         grade = request.form["Grade"]
         print(grade)
         DBList.append(int(grade))
@@ -191,14 +195,16 @@ def overall2():
             curr = DBList[x]
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
+        g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
+        # session["grade"] = avrg
         print(avrg)
-        Message = {"Message": "Done!"}
-        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/BasicQueries.html")
 
 @app.route("/OverallDB4", methods=["GET", "POST"])
 def overall3():
     if request.method == "POST":
+        name = session["name"]
+        email = session["email"]
         grade = request.form["Grade"]
         print(grade)
         DBList.append(int(grade))
@@ -207,14 +213,16 @@ def overall3():
             curr = DBList[x]
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
+        g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
+        # session["grade"] = avrg
         print(avrg)
-        Message = {"Message": "Done!"}
-        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/AgregateFunctions.html")
 
 @app.route("/OverallDB5", methods=["GET", "POST"])
 def overall4():
     if request.method == "POST":
+        name = session["name"]
+        email = session["email"]
         grade = request.form["Grade"]
         print(grade)
         DBList.append(int(grade))
@@ -223,25 +231,26 @@ def overall4():
             curr = DBList[x]
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
+        g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
+        # session["grade"] = avrg
         print(avrg)
-        Message = {"Message": "Done!"}
-        return Message
     return render_template("Classes/Class11/Subjects/Databases/Lessons/ConnectionTable.html")
 
 @app.route("/OverallDB6", methods=["GET", "POST"])
 def overall5():
-    if request.method == "POST":
-        grade = request.form["Grade"]
-        print(grade)
-        DBList.append(int(grade))
-        avrg = 0
-        for x in range(0, len(DBList)):
-            curr = DBList[x]
-            avrg = avrg + int(curr)
-        avrg = avrg / float(len(DBList))
-        print(avrg)
-        Message = {"Message": "Done!"}
-        return Message
+    name = session["name"]
+    email = session["email"]
+    grade = request.form["Grade"]
+    print(grade)
+    DBList.append(int(grade))
+    avrg = 0
+    for x in range(0, len(DBList)):
+        curr = DBList[x]
+        avrg = avrg + int(curr)
+    avrg = avrg / float(len(DBList))
+    g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
+    # session["grade"] = avrg
+    print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/JoinQueries.html")
 
 
