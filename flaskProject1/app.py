@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = "testing"
 mail = Mail(app)
 cors = CORS(app)
-app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'elsyslearn4@gmail.com'
 app.config['MAIL_PASSWORD'] = 'Elsys007'
@@ -20,11 +20,13 @@ app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 serializer = URLSafeTimedSerializer(app.config["SECRET_KEY"])
 
-client = pymongo.MongoClient("mongodb+srv://kris:1234567890@cluster0.vjdqy.mongodb.net/mongotest?retryWrites=true&w=majority")
+client = pymongo.MongoClient(
+    "mongodb+srv://kris:1234567890@cluster0.vjdqy.mongodb.net/mongotest?retryWrites=true&w=majority")
 db = client.get_database('total_records')
 records = db.register
 
 DBList = []
+
 
 @app.route("/")
 def home():
@@ -74,6 +76,7 @@ def index():
 
             return render_template('mainpages/home.html', email=new_email)
     return render_template('Login&Register/register.html')
+
 
 # @app.route("/confirm/<token>")
 # def func(token):
@@ -140,11 +143,9 @@ def logout():
 @app.route("/class11")
 def elevenklass():
     return render_template("Classes/Class11/class11.html")
-
 @app.route("/dblist")
 def dblist():
     return render_template("Classes/Class11/Subjects/Databases/dblessons.html")
-
 @app.route("/OverallDB1", methods=["GET","POST"])
 def overall():
     if request.method == "POST":
@@ -162,7 +163,6 @@ def overall():
         session["grade"] = str(avrg)
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/IntoduceInSQL.html")
-
 
 @app.route("/OverallDB2", methods=["GET", "POST"])
 def overall1():
@@ -256,11 +256,21 @@ def overall5():
 
 @app.route("/grades")
 def grades():
-    if session["email"]:
-        grade = session["grade"]
-        email = session["email"]
-        name = session['name']
-    return render_template("mainpages/grades.html",email = email, name = name, grade=grade)
+    try:
+        if session["email"]:
+            grade = session["grade"]
+            email = session["email"]
+            name = session['name']
+        return render_template("mainpages/grades.html", email=email, name=name, grade=grade)
+    except:
+        return redirect(url_for("logged_in"))
+
+    # if session["email"]:
+    #     grade = session["grade"]
+    #     email = session["email"]
+    #     name = session['name']
+    # return render_template("mainpages/grades.html", email=email, name=name, grade=grade)
+    #
 
 if __name__ == "__main__":
     app.run(debug=True)
