@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5c229ba9-2a16-4ee9-aea6-9b69c752187f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Integration tests/Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Integration tests/Tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Tests">
+  <component name="RunManager" selected="Python.flaskProject1">
     <configuration name="Tests" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -150,6 +150,7 @@
       <workItem from="1624347491837" duration="17622000" />
       <workItem from="1624392042211" duration="4740000" />
       <workItem from="1624462179685" duration="1348000" />
+      <workItem from="1624564624889" duration="4463000" />
     </task>
     <servers />
   </component>

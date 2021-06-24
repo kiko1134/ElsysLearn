@@ -109,6 +109,9 @@ def login():
             if bcrypt.checkpw(password.encode('utf-8'), passwordcheck):
                 session["email"] = email_val
                 session["name"] = username
+                # gr = records.find({"grade"},{email:email_val,_id:0})
+                # print(gr)
+
                 return redirect(url_for('logged_in'))
             else:
                 if "email" in session:
@@ -159,7 +162,7 @@ def overall():
             avrg = avrg + int(curr)
         avrg = round(avrg / float(len(DBList)), 2)
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        session["grade"] = str(avrg)
+        session["grade"] = float(avrg)
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/IntoduceInSQL.html")
 
@@ -178,7 +181,7 @@ def overall1():
             avrg = avrg + int(curr)
         avrg = round(avrg / float(len(DBList)), 2)
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        session["grade"] = avrg
+        session["grade"] = float(avrg)
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/TablesDB.html")
 
@@ -196,7 +199,7 @@ def overall2():
             avrg = avrg + int(curr)
         avrg = round(avrg / float(len(DBList)), 2)
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        session["grade"] = avrg
+        session["grade"] = float(avrg)
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/BasicQueries.html")
 
@@ -213,9 +216,8 @@ def overall3():
             curr = DBList[x]
             avrg = avrg + int(curr)
         avrg = round(avrg / float(len(DBList)), 2)
-        avrg = None
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        session["grade"] = avrg
+        session["grade"] = float(avrg)
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/AgregateFunctions.html")
 
@@ -233,7 +235,7 @@ def overall4():
             avrg = avrg + int(curr)
         avrg = round(avrg / float(len(DBList)), 2)
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        session["grade"] = avrg
+        session["grade"] = float(avrg)
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/ConnectionTable.html")
 
@@ -251,7 +253,7 @@ def overall5():
             avrg = avrg + int(curr)
         avrg = round(avrg / float(len(DBList)), 2)
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        session["grade"] = avrg
+        session["grade"] = float(avrg)
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/JoinQueries.html")
 
