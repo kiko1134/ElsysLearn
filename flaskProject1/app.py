@@ -159,7 +159,7 @@ def overall():
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
         g = records.update_one({"email": email}, {"$set":{"grade": avrg}})
-        # session["grade"] = avrg
+        session["grade"] = str(avrg)
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/IntoduceInSQL.html")
 
@@ -178,7 +178,7 @@ def overall1():
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        # session["grade"] = avrg
+        #session["grade"] = avrg
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/TablesDB.html")
 
@@ -196,7 +196,7 @@ def overall2():
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        # session["grade"] = avrg
+        #session["grade"] = avrg
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/BasicQueries.html")
 
@@ -214,7 +214,7 @@ def overall3():
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        # session["grade"] = avrg
+        #session["grade"] = avrg
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/AgregateFunctions.html")
 
@@ -232,7 +232,7 @@ def overall4():
             avrg = avrg + int(curr)
         avrg = avrg / float(len(DBList))
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        # session["grade"] = avrg
+        #session["grade"] = avrg
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/ConnectionTable.html")
 
@@ -249,7 +249,7 @@ def overall5():
         avrg = avrg + int(curr)
     avrg = avrg / float(len(DBList))
     g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-    # session["grade"] = avrg
+    #session["grade"] = avrg
     print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/JoinQueries.html")
 

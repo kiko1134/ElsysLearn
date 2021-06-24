@@ -5,7 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 import time
 
-PATH = '/home/vpaligorov/Desktop/chromedriver_linux64/chromedriver'
+# PATH = '/home/vpaligorov/Desktop/chromedriver_linux64/chromedriver'
+PATH = '/home/kris/Desktop/chromedriver_linux64/chromedriver'
 driver = webdriver.Chrome(PATH)
 driver.get("http://127.0.0.1:5000")
 
