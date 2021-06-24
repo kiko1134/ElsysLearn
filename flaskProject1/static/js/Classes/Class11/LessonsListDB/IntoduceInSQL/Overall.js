@@ -42,7 +42,7 @@ class DBList extends React.Component {
                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                  allowfullscreen></iframe>
 
-                <button className="like__btn" onClick={this.Liked}>
+                <button className="like__btn" id = "like" onClick={this.Liked}>
                     <span id="icon"><i className="far fa-thumbs-up"></i></span>
                     <span id="count">0</span> Like
                 </button>
