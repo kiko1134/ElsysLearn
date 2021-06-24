@@ -20,8 +20,7 @@ app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 serializer = URLSafeTimedSerializer(app.config["SECRET_KEY"])
 
-client = pymongo.MongoClient(
-    "mongodb+srv://kris:1234567890@cluster0.vjdqy.mongodb.net/mongotest?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://kris:1234567890@cluster0.vjdqy.mongodb.net/mongotest?retryWrites=true&w=majority")
 db = client.get_database('total_records')
 records = db.register
 
@@ -158,8 +157,8 @@ def overall():
         for x in range(0, len(DBList)):
             curr = DBList[x]
             avrg = avrg + int(curr)
-        avrg = avrg / float(len(DBList))
-        g = records.update_one({"email": email}, {"$set":{"grade": avrg}})
+        avrg = round(avrg / float(len(DBList)), 2)
+        g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
         session["grade"] = str(avrg)
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/IntoduceInSQL.html")
@@ -172,13 +171,14 @@ def overall1():
         grade = request.form["Grade"]
         print(grade)
         DBList.append(int(grade))
+        print(DBList)
         avrg = 0
         for x in range(0, len(DBList)):
             curr = DBList[x]
             avrg = avrg + int(curr)
-        avrg = avrg / float(len(DBList))
+        avrg = round(avrg / float(len(DBList)), 2)
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        #session["grade"] = avrg
+        session["grade"] = avrg
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/TablesDB.html")
 
@@ -194,9 +194,9 @@ def overall2():
         for x in range(0, len(DBList)):
             curr = DBList[x]
             avrg = avrg + int(curr)
-        avrg = avrg / float(len(DBList))
+        avrg = round(avrg / float(len(DBList)), 2)
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        #session["grade"] = avrg
+        session["grade"] = avrg
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/BasicQueries.html")
 
@@ -212,9 +212,10 @@ def overall3():
         for x in range(0, len(DBList)):
             curr = DBList[x]
             avrg = avrg + int(curr)
-        avrg = avrg / float(len(DBList))
+        avrg = round(avrg / float(len(DBList)), 2)
+        avrg = None
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        #session["grade"] = avrg
+        session["grade"] = avrg
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/AgregateFunctions.html")
 
@@ -230,27 +231,28 @@ def overall4():
         for x in range(0, len(DBList)):
             curr = DBList[x]
             avrg = avrg + int(curr)
-        avrg = avrg / float(len(DBList))
+        avrg = round(avrg / float(len(DBList)), 2)
         g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-        #session["grade"] = avrg
+        session["grade"] = avrg
         print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/ConnectionTable.html")
 
 @app.route("/OverallDB6", methods=["GET", "POST"])
 def overall5():
-    name = session["name"]
-    email = session["email"]
-    grade = request.form["Grade"]
-    print(grade)
-    DBList.append(int(grade))
-    avrg = 0
-    for x in range(0, len(DBList)):
-        curr = DBList[x]
-        avrg = avrg + int(curr)
-    avrg = avrg / float(len(DBList))
-    g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
-    #session["grade"] = avrg
-    print(avrg)
+    if request.method == "POST":
+        name = session["name"]
+        email = session["email"]
+        grade = request.form["Grade"]
+        print(grade)
+        DBList.append(int(grade))
+        avrg = 0
+        for x in range(0, len(DBList)):
+            curr = DBList[x]
+            avrg = avrg + int(curr)
+        avrg = round(avrg / float(len(DBList)), 2)
+        g = records.update_one({"email": email}, {"$set": {"grade": avrg}})
+        session["grade"] = avrg
+        print(avrg)
     return render_template("Classes/Class11/Subjects/Databases/Lessons/JoinQueries.html")
 
 
@@ -263,7 +265,9 @@ def grades():
             name = session['name']
         return render_template("mainpages/grades.html", email=email, name=name, grade=grade)
     except:
-        return redirect(url_for("logged_in"))
+        email = session["email"]
+        name = session['name']
+        return render_template("mainpages/grades.html", email=email, name=name, grade="-")
 
     # if session["email"]:
     #     grade = session["grade"]

@@ -7,6 +7,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 import time
 
 PATH = '/home/vpaligorov/Desktop/chromedriver_linux64/chromedriver'
+
+
 # PATH = '/home/kris/Desktop/chromedriver_linux64/chromedriver'
 # driver = webdriver.Chrome(PATH)
 # driver.get("http://127.0.0.1:5000")
@@ -33,7 +35,6 @@ class ElsysLearnTests(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_name("button").click()
         time.sleep(1)
-        assert True
 
     def test_login(self):
         login = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.ID, "login")))
@@ -47,7 +48,6 @@ class ElsysLearnTests(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_name("button").click()
         time.sleep(1)
-        assert True
 
     def test_DBLesson1(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB1")
@@ -60,7 +60,6 @@ class ElsysLearnTests(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
-        assert True
 
     def test_DBLesson2(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB2")
@@ -73,7 +72,6 @@ class ElsysLearnTests(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
-        assert True
 
     def test_DBLesson3(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB3")
@@ -86,7 +84,6 @@ class ElsysLearnTests(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
-        assert True
 
     def test_DBLesson4(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB4")
@@ -99,7 +96,6 @@ class ElsysLearnTests(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
-        assert True
 
     def test_DBLesson5(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB5")
@@ -112,7 +108,6 @@ class ElsysLearnTests(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
-        assert True
 
     def test_DBLesson6(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB6")
@@ -125,7 +120,6 @@ class ElsysLearnTests(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
-        assert True
 
     def test_Footer(self):
         Facebook = WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.ID, "Facebook")))
@@ -148,7 +142,6 @@ class ElsysLearnTests(unittest.TestCase):
 
         time.sleep(1)
 
-        assert True
 
 def tearDown(self):
     self.driver.quit()
