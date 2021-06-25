@@ -19,19 +19,19 @@ class Navbar extends React.Component {
                     </a>
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a href="/"  className="nav-link">   8 клас</a>
+                            <a href="/logged_in"  className="nav-link">   8 клас</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/"  className="nav-link">   9 клас</a>
+                            <a href="/logged_in"  className="nav-link">   9 клас</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/"  className="nav-link">   10 клас</a>
+                            <a href="/logged_in"  className="nav-link">   10 клас</a>
                         </li>
                         <li className="nav-item">
                             <a href="/class11"  className="nav-link">   11 клас</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/"  className="nav-link">   12 клас</a>
+                            <a href="/logged_in"  className="nav-link">   12 клас</a>
                         </li>
                     </ul>
                 </div>
@@ -40,10 +40,10 @@ class Navbar extends React.Component {
                      <>
                         <ul className="navbar-nav ml-auto flex-nowrap">
                             <li className="nav-item">
-                                <a href="/grades" className="nav-link"> Profile</a>
+                                <a href="/grades" id="grades" className="nav-link"> Profile</a>
                             </li>
                             <li className="nav-item">
-                                <a href="/logout"  className="nav-link"  onClick={this.LoggedOut}> LogOut</a>
+                                <a href="/logout" id="logout" className="nav-link"  onClick={this.LoggedOut}> LogOut</a>
                             </li>
                         </ul>
                       </>
