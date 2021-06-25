@@ -21,7 +21,7 @@ class ElsysLearnTests(unittest.TestCase):
         self.driver.get("http://127.0.0.1:5000")
         self.driver.maximize_window()
 
-    def test_register(self):
+    def test_1_register(self):
         register = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.ID, "register")))
         register.click()
         fullname = self.driver.find_element_by_name("fullname")
@@ -36,7 +36,7 @@ class ElsysLearnTests(unittest.TestCase):
         self.driver.find_element_by_name("button").click()
         time.sleep(1)
 
-    def test_login(self):
+    def test_2_login_grades_logout(self):
         login = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.ID, "login")))
         login.click()
         email = self.driver.find_element_by_name("email")
@@ -48,9 +48,14 @@ class ElsysLearnTests(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_name("button").click()
         time.sleep(1)
+        self.driver.find_element_by_id("grades").click()
+        time.sleep(1)
+        self.driver.find_element_by_id("logout").click()
+        time.sleep(2)
 
-    def test_DBLesson1(self):
+    def test_3_DBLesson1(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB1")
+        time.sleep(1)
         self.driver.find_element_by_id("1.2").click()
         self.driver.find_element_by_id("2.3").click()
         self.driver.find_element_by_id("3.1").click()
@@ -61,8 +66,9 @@ class ElsysLearnTests(unittest.TestCase):
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
 
-    def test_DBLesson2(self):
+    def test_4_DBLesson2(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB2")
+        time.sleep(1)
         self.driver.find_element_by_id("1.3").click()
         self.driver.find_element_by_id("2.1").click()
         self.driver.find_element_by_id("3.3").click()
@@ -73,8 +79,9 @@ class ElsysLearnTests(unittest.TestCase):
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
 
-    def test_DBLesson3(self):
+    def test_5_DBLesson3(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB3")
+        time.sleep(1)
         self.driver.find_element_by_id("1.4").click()
         self.driver.find_element_by_id("2.3").click()
         self.driver.find_element_by_id("3.1").click()
@@ -85,8 +92,9 @@ class ElsysLearnTests(unittest.TestCase):
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
 
-    def test_DBLesson4(self):
+    def test_6_DBLesson4(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB4")
+        time.sleep(1)
         self.driver.find_element_by_id("1.3").click()
         self.driver.find_element_by_id("2.2").click()
         self.driver.find_element_by_id("3.1").click()
@@ -97,8 +105,9 @@ class ElsysLearnTests(unittest.TestCase):
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
 
-    def test_DBLesson5(self):
+    def test_7_DBLesson5(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB5")
+        time.sleep(1)
         self.driver.find_element_by_id("1.4").click()
         self.driver.find_element_by_id("2.1").click()
         self.driver.find_element_by_id("3.2").click()
@@ -109,8 +118,9 @@ class ElsysLearnTests(unittest.TestCase):
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
 
-    def test_DBLesson6(self):
+    def test_8_DBLesson6(self):
         self.driver.get("http://127.0.0.1:5000/OverallDB6")
+        time.sleep(1)
         self.driver.find_element_by_id("1.4").click()
         self.driver.find_element_by_id("2.1").click()
         self.driver.find_element_by_id("3.2").click()
@@ -121,7 +131,7 @@ class ElsysLearnTests(unittest.TestCase):
         self.driver.find_element_by_id("button").click()
         time.sleep(1)
 
-    def test_Footer(self):
+    def test_9_Footer(self):
         Facebook = WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((By.ID, "Facebook")))
         Facebook.click()
 
@@ -142,9 +152,8 @@ class ElsysLearnTests(unittest.TestCase):
 
         time.sleep(1)
 
-
-def tearDown(self):
-    self.driver.quit()
+    def tearDown(self):
+        self.driver.quit()
 
 
 if __name__ == "__main__":
